@@ -1,0 +1,28 @@
+# VisDrone Dataset Configuration for YOLOv8
+# Only retaining 'pedestrian' and 'car' classes for this assessment
+
+path: ./data                    # Root dataset directory
+train: VisDrone2019-DET-train/images
+val:   VisDrone2019-DET-val/images
+test:  VisDrone2019-DET-test-dev/images
+
+# Number of classes (filtered: person + car only)
+nc: 2
+
+# Class names
+names:
+  0: person
+  1: car
+
+# VisDrone original class mapping (10 classes → we keep indices 1 and 4)
+# 0: ignored regions
+# 1: pedestrian       → person (0)
+# 2: people           → person (0)  [merged]
+# 3: bicycle          → ignored
+# 4: car              → car   (1)
+# 5: van              → car   (1)   [merged, optional]
+# 6: truck            → ignored
+# 7: tricycle         → ignored
+# 8: awning-tricycle  → ignored
+# 9: bus              → ignored
+# 10: motor           → ignored

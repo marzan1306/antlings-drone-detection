@@ -1,0 +1,9 @@
+dataset/
+data/
+runs/
+venv/
+*.pt
+__pycache__/
+.ipynb_checkpoints/
+outputs/videos/
+*.pyc
